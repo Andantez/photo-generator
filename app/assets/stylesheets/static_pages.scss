@@ -1,0 +1,29 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.para {
+  font-size: 2rem;
+  text-align: center;
+  a{
+    color: blue;
+  }
+}
+
+.input {
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.submit {
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+
+.container {
+ text-align: center;
+ margin: 30px;
+}
+
+.image {
+  margin: 5px;
+}

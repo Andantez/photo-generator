@@ -1,0 +1,19 @@
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
+
+<p class="para">Search for <%= link_to "Flickr", 'https://www.flickr.com/', target: '_blank' %> user photos</p>
+<div class="container">
+  <%= form_with(scope: :flickr, local: true, method: "get") do |f| %>
+    <%= f.text_field :user_id, required: true, placeholder: "Search for Flickr user id...", class: "input" %>
+    <%= f.submit "Search", class: "submit" %>
+  <% end %>
+</div> 
+  <% if @photos.nil? %>
+  <% else %>
+  <% @photos.each do |photo| %>
+    <%= image_tag(photo.url_m, width: 400, height: 400,class: "image" )%>
+  <% end %>
+  <% end %>
+
+</p>
